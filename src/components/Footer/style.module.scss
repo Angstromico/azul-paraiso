@@ -1,0 +1,36 @@
+.middleLine {
+  @apply w-[1px] h-16 bg-white hidden md:block;
+}
+.flex-container {
+  @apply flex flex-col md:flex-row  md:justify-between w-full max-w-[24rem] gap-3 flex-wrap;
+}
+
+.footer {
+  @apply bg-azul w-full px-4 pt-16 pb-24 text-white flex justify-center items-center flex-col mt-0;
+  .logos {
+    @apply mt-4 my-6 max-w-[24rem] flex justify-center items-center;
+    @extend .flex-container;
+    img {
+      @apply max-w-[200px];
+    }
+    div {
+      @extend .middleLine;
+    }
+  }
+  .contact {
+    .title {
+      @apply text-5xl my-12 text-center;
+    }
+    .paths {
+      @apply my-4 max-w-xl text-lg;
+      @extend .flex-container;
+      div {
+        @extend .middleLine;
+        @apply h-6;
+      }
+    }
+  }
+  .footSection {
+    @apply flex flex-col gap-6 justify-center items-center text-base mt-12;
+  }
+}

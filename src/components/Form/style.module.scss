@@ -1,0 +1,55 @@
+.form {
+  @apply grid grid-cols-1 lg:grid-cols-2 w-full max-w-2xl md:gap-6 mx-auto my-6 justify-center items-start px-8;
+  &.bigger {
+    @apply max-w-7xl px-0;
+  }
+  div {
+    .inputContainer {
+      @apply flex flex-col justify-start items-start my-5 font-Lato font-bold text-lg w-full;
+      label {
+        @apply mb-3;
+      }
+      input {
+        @apply w-full md:w-[90%] text-azul rounded p-2 outline-none font-LatoLight;
+      }
+      .radios {
+        @apply flex w-full md:w-[90%] gap-9;
+        label {
+          @apply flex flex-row-reverse gap-2 cursor-pointer;
+          &.blue {
+            @apply text-azul;
+          }
+          input[type='radio'] {
+            @apply cursor-pointer accent-azul w-4 border-none;
+            outline: none;
+            box-shadow: none;
+            border-color: transparent;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+          }
+        }
+      }
+      textarea {
+        @apply w-full md:w-[90%] focus:outline-none cursor-pointer resize-none rounded text-azul px-3 py-5 h-[195px];
+        &.taller {
+          @apply h-[200px];
+        }
+      }
+      input,
+      textarea {
+        @apply shadow-lg border-[0.3px] border-gris border-opacity-10;
+      }
+      .error {
+        @apply text-[#d9534f] my-1;
+      }
+      .recaptcha {
+        @apply w-full md:w-[90%];
+      }
+    }
+    button {
+      @apply w-full md:w-[90%] rounded text-center bg-verde py-2 px-1;
+    }
+  }
+}

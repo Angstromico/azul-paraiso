@@ -1,0 +1,27 @@
+.middleLine {
+  @apply w-[2px] h-64 bg-gris hidden md:block mt-1;
+}
+.flex-container {
+  @apply flex flex-col md:flex-row justify-center items-center md:justify-start w-full max-w-[50rem] gap-3 flex-wrap md:gap-9;
+}
+
+.contactContainer {
+  @apply grid w-full grid-cols-1 md:grid-cols-2 gap-4 md:gap-9 justify-center items-center mx-3;
+  .img {
+    @apply w-full h-[600px] md:h-full bg-cover bg-no-repeat bg-center;
+  }
+  .formContent {
+    @apply mt-4 mb-4 md:mt-12 md:mb-10 w-full;
+    h2 {
+      @apply text-center md:text-left text-4xl md:text-5xl mt-2 mb-12 md:mb-20 font-Lato font-bold;
+    }
+    .paths {
+      @apply my-4 text-xl md:text-2xl;
+      @extend .flex-container;
+      div {
+        @extend .middleLine;
+        @apply h-6;
+      }
+    }
+  }
+}

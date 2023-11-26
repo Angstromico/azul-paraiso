@@ -1,0 +1,22 @@
+.p {
+  @apply text-xl md:text-2xl mb-4;
+}
+
+.stateContainer {
+  @apply grid grid-cols-1 md:grid-cols-2 w-full h-[1000px] md:h-[600px] my-44;
+  .sliderSection {
+    @apply w-full h-[500px] md:h-full;
+    .slide {
+      @apply w-full h-full bg-cover bg-center bg-no-repeat cursor-grab;
+    }
+  }
+  .textSection {
+    @apply w-full h-[500px] md:h-full lg:ml-12 p-6 md:p-7 max-w-[800px];
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+  }
+}

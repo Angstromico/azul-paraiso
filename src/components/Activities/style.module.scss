@@ -1,0 +1,34 @@
+.p {
+  @apply text-xl md:text-2xl mb-4;
+}
+
+.activitiesContainer {
+  @apply text-white w-full grid grid-cols-1 md:grid-cols-2 h-[1000px] md:h-[650px] my-44;
+  .sliderSection {
+    @apply w-full relative h-[500px] md:h-full;
+    .slide {
+      @apply w-full h-full bg-cover bg-center bg-no-repeat cursor-grab;
+    }
+  }
+  .textSection {
+    @apply bg-verde w-full h-[500px] md:h-full p-6 md:p-7;
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+    ul {
+      @apply my-4;
+      li {
+        @extend .p;
+        @apply ml-8 md:ml-10 block my-3 md:my-4 relative;
+        &:before {
+          content: '';
+          @apply bg-white rounded-full w-[6px] h-[6px] absolute left-[-1rem] top-1/2;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

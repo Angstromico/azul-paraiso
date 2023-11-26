@@ -1,0 +1,19 @@
+.p {
+  @apply text-xl md:text-2xl mb-4;
+}
+
+.aboutSection {
+  @apply grid grid-cols-1 md:grid-cols-2 w-full my-44;
+  .textSection {
+    @apply w-full h-[500px] p-6 md:p-7;
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+  }
+  .imageSection {
+    @apply w-full h-[500px] md:h-full bg-center bg-no-repeat bg-cover;
+  }
+}

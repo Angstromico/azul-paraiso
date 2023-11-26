@@ -1,0 +1,36 @@
+.p {
+  @apply text-xl md:text-2xl mb-4;
+}
+
+.rentContainer {
+  @apply flex flex-col lg:flex-row-reverse gap-4 lg:gap-6 px-2 my-44 max-w-[2000px] mx-3;
+  .textSection {
+    @apply md:w-[90vw];
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+    .images {
+      @apply flex flex-col md:flex-row w-full gap-4 justify-center items-center md:mr-24 lg:mr-32 xl:mr-40;
+      &.second {
+        @apply hidden;
+      }
+      .imageContainer {
+        @apply rounded flex flex-col w-full md:w-[60%] h-full md:min-w-[300px]  max-w-xs hover:shadow-none border-4 border-[transparent] transition-all hover:border-[#EE82EE] gap-7 md:gap-6 mt-7;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        img {
+          @apply mx-auto mt-8 mb-4 w-32 md:w-36;
+          &.second {
+            @apply w-40 md:w-40 h-36;
+          }
+        }
+        p {
+          @extend .p;
+          @apply font-Lato font-bold text-azul text-center;
+        }
+      }
+    }
+  }
+}

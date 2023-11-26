@@ -1,0 +1,46 @@
+.p {
+  @apply text-xl md:text-2xl mb-4;
+}
+.btn {
+  @apply rounded text-sm md:text-base px-3 py-1 md:px-4 md:py-2 gap-2 items-center font-Lato font-bold flex max-w-[200px];
+}
+
+.locationsContainer {
+  @apply w-full grid grid-cols-1 md:grid-cols-2 h-[1000px] md:h-[700px] my-44;
+  .textSection {
+    @apply w-full p-6 md:p-7;
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+    h3 {
+      @extend .p;
+      @apply font-Lato font-bold;
+    }
+    ul {
+      @apply my-4;
+      li {
+        @extend .p;
+        @apply ml-8 md:ml-10 block my-3 md:my-4 relative;
+        &:before {
+          content: '';
+          @apply bg-gris rounded-full w-[6px] h-[6px] absolute left-[-1rem] top-1/2;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .btn1 {
+      @extend .btn;
+      @apply bg-azul text-white mt-2 mb-6;
+    }
+    .btn2 {
+      @extend .btn;
+      @apply text-azul border border-azul;
+    }
+  }
+  .imageSection {
+    @apply w-full h-[500px] md:h-full bg-center bg-no-repeat bg-cover;
+  }
+}

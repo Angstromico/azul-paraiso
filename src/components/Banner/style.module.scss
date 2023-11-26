@@ -1,0 +1,6 @@
+.bannerContainer {
+  @apply w-full h-[45rem] md:h-[1000px] mb-6 bg-no-repeat bg-cover bg-center relative;
+  .arrow {
+    @apply absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bottom-5 cursor-pointer;
+  }
+}

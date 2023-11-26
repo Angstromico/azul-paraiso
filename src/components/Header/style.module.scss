@@ -1,0 +1,43 @@
+.a {
+  @apply text-lg font-light cursor-pointer;
+}
+.boldLink {
+  @apply font-Lato font-bold;
+}
+
+.header {
+  @apply py-5 bg-azul text-white flex justify-center items-center mx-auto w-full z-[500];
+  &.fixedHeader {
+    @apply fixed top-0 left-0 bg-opacity-60;
+  }
+  .container {
+    @apply flex flex-col md:flex-row justify-center mx-auto items-center w-full;
+    .desktop nav a,
+    .mobile .menu nav a {
+      a {
+        @extend .a;
+      }
+    }
+    .desktop {
+      @apply max-w-6xl hidden md:flex justify-between items-center gap-6;
+      nav {
+        @apply flex justify-between gap-4;
+        .selected {
+          @extend .boldLink;
+        }
+      }
+    }
+    .mobile {
+      @apply flex justify-between mx-4 items-center md:hidden w-full relative;
+      .menu {
+        @apply w-[50vw] min-w-[150px] bg-azul absolute top-0 right-[-1rem] z-30 h-screen text-base;
+        nav {
+          @apply flex flex-col gap-4 items-center justify-center mt-24;
+          .selected {
+            @extend .boldLink;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.a, .header .container .desktop nav a a,
+.header .container .mobile .menu nav a a {
+  @apply text-lg font-light cursor-pointer;
+}
+
+.header {
+  @apply py-5 bg-azul text-white flex justify-center items-center mx-auto;
+}
+.header .container {
+  @apply flex flex-col md:flex-row justify-center mx-auto items-center w-full;
+}
+.header .container .desktop {
+  @apply max-w-6xl hidden md:flex justify-between items-center gap-6;
+}
+.header .container .desktop nav {
+  @apply flex justify-between gap-4;
+}
+.header .container .mobile {
+  @apply flex justify-between mx-4 items-center md:hidden w-full relative;
+}
+.header .container .mobile .menu {
+  @apply w-[50vw] min-w-[150px] bg-azul absolute top-0 right-[-1rem] z-30 h-screen text-base;
+}
+.header .container .mobile .menu nav {
+  @apply flex flex-col gap-4 items-center justify-center mt-24;
+}/*# sourceMappingURL=style.module.css.map */

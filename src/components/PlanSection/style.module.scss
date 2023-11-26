@@ -1,0 +1,19 @@
+.p {
+  @apply text-xl md:text-2xl mb-8 w-full lg:w-1/2;
+}
+
+.planContainer {
+  @apply w-full my-44;
+  .textSection {
+    @apply w-full p-6 md:p-7;
+    h2 {
+      @apply text-5xl md:text-6xl mt-2 mb-8 font-Lato font-bold;
+    }
+    p {
+      @extend .p;
+    }
+  }
+  .img {
+    @apply w-full h-[650px] md:h-[750px] bg-cover bg-center bg-no-repeat;
+  }
+}
